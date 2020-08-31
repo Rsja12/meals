@@ -1,14 +1,20 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
-const MealDetailsScreen = () => {
+const MealDetailsScreen = (props) => {
     return (
-        <View>
+        <View style={styles.screen}>
             <Text></Text>
         </View>
-    )
-}
+    );
+};
 
-export default MealDetailsScreen
+export default MealDetailsScreen;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    screen: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+});

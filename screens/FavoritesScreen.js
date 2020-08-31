@@ -1,14 +1,20 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
-const FavoritesScreen = () => {
+const FavoritesScreen = (props) => {
     return (
-        <View>
-            <Text></Text>
+        <View style={styles.screen}>
+            <Text>Favorites Screen</Text>
         </View>
-    )
-}
+    );
+};
 
-export default FavoritesScreen
+export default FavoritesScreen;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    screen: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+});
