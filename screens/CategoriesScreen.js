@@ -12,8 +12,11 @@ import { CATEGORIES } from '../data/dummy-data';
 const CategoriesScreen = (props) => {
     const renderGridItem = (itemData) => {
         return (
-            <TouchableOpacity onPress={() => props.navigation.navigate('Meals')}>
-                <View style={styles.gridItem}>
+            <TouchableOpacity
+                style={styles.gridItem}
+                onPress={() => props.navigation.navigate('Meals')}
+            >
+                <View>
                     <Text>{itemData.item.title}</Text>
                 </View>
             </TouchableOpacity>
@@ -28,6 +31,10 @@ const CategoriesScreen = (props) => {
         />
     );
 };
+
+CategoriesScreen.navigationOptions = {
+    headerTitle: 'Meal Categories'
+}
 
 export default CategoriesScreen;
 
