@@ -1,15 +1,19 @@
 import React from 'react';
-import { StyleSheet, Text, Button, View } from 'react-native';
+import { StyleSheet, Text, Button, FlatList, View } from 'react-native';
+
+import { CATEGORIES } from '../data/dummy-data';
+
+const renderGridItem = (itemData) => {
+    return <View><Text>{itemData.item.title}</Text></View>;
+};
 
 const CategoriesScreen = (props) => {
     return (
-        <View style={styles.screen}>
-            <Text>Categories Screen</Text>
-            <Button
-                title='Go to Meals'
-                onPress={() => props.navigation.navigate('Meals')}
-            />
-        </View>
+        <FlatList
+            data={CATEGORIES}
+            renderItem={renderGridItem}
+            numColumns={2}
+        />
     );
 };
 
