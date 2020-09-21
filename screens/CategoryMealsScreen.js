@@ -13,7 +13,6 @@ const CategoryMealsScreen = (props) => {
     return (
         <View style={styles.screen}>
             <Text>Category Meal Screen</Text>
-            <Text>{selectedCategory.title}</Text>
             <Button
                 title='View Details'
                 onPress={() => props.navigation.navigate('MealDetails')}
@@ -21,6 +20,17 @@ const CategoryMealsScreen = (props) => {
         </View>
     );
 };
+
+CategoryMealsScreen.navigationOptions = (navigationData) => {
+    const categoryId = navigationData.navigation.getParam('categoryId')
+    const selectedCategory = CATEGORIES.find(
+        (category) => category.id === categoryId
+    );
+
+    return {
+        headerTitle: selectedCategory.title
+    }
+}
 
 export default CategoryMealsScreen;
 
