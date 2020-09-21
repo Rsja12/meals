@@ -11,11 +11,14 @@ import { CATEGORIES } from '../data/dummy-data';
 import { Colors } from '../constants/Colors';
 
 const CategoriesScreen = (props) => {
+    
     const renderGridItem = (itemData) => {
         return (
             <TouchableOpacity
                 style={styles.gridItem}
-                onPress={() => props.navigation.navigate('Meals')}
+                onPress={() => props.navigation.navigate('Meals', {
+                    categoryId: itemData.item.id
+                })}
             >
                 <View>
                     <Text>{itemData.item.title}</Text>
