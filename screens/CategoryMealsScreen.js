@@ -4,12 +4,6 @@ import { StyleSheet, Text, Button, View } from 'react-native';
 import { CATEGORIES } from '../data/dummy-data';
 
 const CategoryMealsScreen = (props) => {
-    const categoryId = props.navigation.getParam('categoryId');
-
-    const selectedCategory = CATEGORIES.find(
-        (category) => category.id === categoryId
-    );
-
     return (
         <View style={styles.screen}>
             <Text>Category Meal Screen</Text>
@@ -28,7 +22,7 @@ CategoryMealsScreen.navigationOptions = (navigationData) => {
     );
 
     return {
-        headerTitle: selectedCategory.title
+        headerTitle: selectedCategory.title,
     }
 }
 

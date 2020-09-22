@@ -37,7 +37,7 @@ const CategoriesScreen = (props) => {
 };
 
 CategoriesScreen.navigationOptions = {
-    headerTitle: 'Categories'
+    headerTitle: 'Categories',
 }
 
 export default CategoriesScreen;
