@@ -9,12 +9,20 @@ import {
 
 import { CATEGORIES } from '../data/dummy-data';
 import { Colors } from '../constants/Colors';
-import CategoryGridTile from '../components/CategoryGridTile'
+import CategoryGridTile from '../components/CategoryGridTile';
 
 const CategoriesScreen = (props) => {
-    
     const renderGridItem = (itemData) => {
-        return <CategoryGridTile title={itemData.item.title} />;
+        return (
+            <CategoryGridTile
+                title={itemData.item.title}
+                onSelect={() => {
+                    props.navigation.navigate('Meals', {
+                        categoryId: itemData.item.id,
+                    });
+                }}
+            />
+        );
     };
 
     return (
@@ -28,7 +36,7 @@ const CategoriesScreen = (props) => {
 
 CategoriesScreen.navigationOptions = {
     headerTitle: 'Categories',
-}
+};
 
 export default CategoriesScreen;
 
@@ -37,5 +45,5 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-    }
+    },
 });
