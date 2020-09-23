@@ -1,10 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
-const CategoryGridTile = ({ title, onSelect }) => {
+const CategoryGridTile = ({ title, onSelect, color }) => {
     return (
         <TouchableOpacity style={styles.gridItem} onPress={() => onSelect()}>
-            <View>
+            <View
+                style={{ ...styles.container, ...{ backgroundColor: color }}}
+            >
                 <Text>{title}</Text>
             </View>
         </TouchableOpacity>
@@ -18,5 +20,8 @@ const styles = StyleSheet.create({
         flex: 1,
         margin: 15,
         height: 150,
+    },
+    container: {
+        flex: 1,
     },
 });
