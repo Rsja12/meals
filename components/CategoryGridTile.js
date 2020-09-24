@@ -5,7 +5,7 @@ const CategoryGridTile = ({ title, onSelect, color }) => {
     return (
         <TouchableOpacity style={styles.gridItem} onPress={() => onSelect()}>
             <View
-                style={{ ...styles.container, ...{ backgroundColor: color }}}
+                style={{ ...styles.container, ...{ backgroundColor: color } }}
             >
                 <Text>{title}</Text>
             </View>
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowRadius: 10,
         padding: 15,
-        justifyContent: "flex-end",
-        alignItems: "flex-end"
-    }
+        justifyContent: 'flex-end',
+        alignItems: 'flex-end',
+    },
 });
