@@ -17,7 +17,7 @@ const MealItem = (props) => {
                             style={styles.bgImage}
                             source={{ uri: props.image }}
                         >
-                            <Text>{props.title}</Text>
+                            <Text style={styles.title}>{props.title}</Text>
                         </ImageBackground>
                     </View>
                     <View style={{ ...styles.mealRow, ...styles.mealDetail }}>
@@ -53,4 +53,11 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
     },
+    title: {
+        fontSize: 22,
+        color: 'white',
+        backgroundColor: 'rgba(0,0,0,0.5)',
+        paddingVertical: 5,
+        paddingHorizontal: 12
+    }
 });
