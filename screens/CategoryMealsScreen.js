@@ -15,6 +15,7 @@ const CategoryMealsScreen = (props) => {
             <MealItem 
                 onSelect={() => {}}
                 title={itemData.item.title} 
+                image={itemData.item.imageUrl}
                 duration={itemData.item.duration}
                 complexity={itemData.item.complexity}
                 affordability={itemData.item.affordability}
