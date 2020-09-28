@@ -1,14 +1,25 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React from 'react';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
-const MealItem = () => {
+const MealItem = (props) => {
     return (
-        <View>
-            <Text></Text>
-        </View>
-    )
-}
+        <TouchableOpacity onPress={props.onSelect}>
+            <View>
+                <View style={styles.mealRow}>
+                    <Text>{props.title}</Text>
+                </View>
+                <View style={styles.mealRow}>
+                    
+                </View>
+            </View>
+        </TouchableOpacity>
+    );
+};
 
-export default MealItem
+export default MealItem;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    mealRow: {
+        flexDirection: 'row'
+    }
+});
