@@ -9,10 +9,10 @@ const MealItem = (props) => {
                     <View style={{ ...styles.mealRow, ...styles.mealHeader }}>
                         <Text>{props.title}</Text>
                     </View>
-                    <View
-                        style={{ ...styles.mealRow, ...styles.mealDetail }}
-                    >
+                    <View style={{ ...styles.mealRow, ...styles.mealDetail }}>
                         <Text>{props.duration} min</Text>
+                        <Text>{props.complexity}</Text>
+                        <Text>{props.affordability}</Text>
                     </View>
                 </View>
             </TouchableOpacity>
@@ -32,10 +32,10 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     mealHeader: {
-        height: '85%'
+        height: '85%',
     },
     mealDetail: {
         paddingHorizontal: 10,
-        justifyContent: 'space-between'
-    }
+        justifyContent: 'space-between',
+    },
 });
