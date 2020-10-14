@@ -1,9 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import { MEALS } from 
+import { MEALS } from '../data/dummy-data'
 
 const MealDetailsScreen = (props) => {
+    const mealId = props.navigation.getParam('mealId')
+
     return (
         <View style={styles.screen}>
             <Text>Meal Details</Text>
