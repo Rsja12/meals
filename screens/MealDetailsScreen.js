@@ -9,7 +9,7 @@ const MealDetailsScreen = (props) => {
 
     return (
         <View style={styles.screen}>
-            <Text>Meal Details</Text>
+            <Text>{selectedMeal.title}</Text>
         </View>
     );
 };
