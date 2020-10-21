@@ -8,7 +8,7 @@ import CategoriesScreen from '../screens/CategoriesScreen';
 import CategoryMealsScreen from '../screens/CategoryMealsScreen';
 import MealDetailsScreen from '../screens/MealDetailsScreen';
 import FavoritesScreen from '../screens/FavoritesScreen';
-import { forRevealFromBottomAndroid } from 'react-navigation-stack/lib/typescript/src/vendor/TransitionConfigs/CardStyleInterpolators';
+
 
 const MealsNavigator = createStackNavigator({
     Categories: CategoriesScreen,
@@ -38,7 +38,7 @@ const MealsTabNavigator = createBottomTabNavigator(
             },
         },
         Favorites: {
-            screen: FavoritesScreen,
+            screen: FavoritesNavigator,
             navigationOptions: {
                 tabBarIcon: (tabInfo) => {
                     return (
