@@ -1,8 +1,7 @@
 import React from 'react';
-import { StyleSheet, FlatList, View } from 'react-native';
 
 import { CATEGORIES, MEALS } from '../data/dummy-data';
-import MealItem from '../components/MealItem';
+import MealList from '../components/MealList';
 
 const CategoryMealsScreen = (props) => {
     const categoryId = props.navigation.getParam('categoryId');
@@ -10,16 +9,7 @@ const CategoryMealsScreen = (props) => {
         (meal) => meal.categoryIds.indexOf(categoryId) >= 0
     );
 
-    return (
-        <View style={styles.screen}>
-            <FlatList
-                data={displayedMeals}
-                keyExtractor={(item, index) => item.id}
-                renderItem={renderMealItem}
-                style={{ width: '100%' }}
-            />
-        </View>
-    );
+    return <MealList listData={displayedMeals} navigation={props.navigation} />;
 };
 
 CategoryMealsScreen.navigationOptions = (navigationData) => {
@@ -34,4 +24,3 @@ CategoryMealsScreen.navigationOptions = (navigationData) => {
 };
 
 export default CategoryMealsScreen;
-
