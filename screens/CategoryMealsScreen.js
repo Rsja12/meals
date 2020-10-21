@@ -10,23 +10,6 @@ const CategoryMealsScreen = (props) => {
         (meal) => meal.categoryIds.indexOf(categoryId) >= 0
     );
 
-    const renderMealItem = (itemData) => {
-        return (
-            <MealItem
-                title={itemData.item.title}
-                image={itemData.item.imageUrl}
-                duration={itemData.item.duration}
-                complexity={itemData.item.complexity}
-                affordability={itemData.item.affordability}
-                onSelect={() => {
-                    props.navigation.navigate('MealDetails', {
-                        mealId: itemData.item.id,
-                    });
-                }}
-            />
-        );
-    };
-
     return (
         <View style={styles.screen}>
             <FlatList

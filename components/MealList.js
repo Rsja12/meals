@@ -2,10 +2,27 @@ import React from 'react'
 import { StyleSheet, View, FlatList } from 'react-native'
 
 const MealList = (props) => {
+    const renderMealItem = (itemData) => {
+        return (
+            <MealItem
+                title={itemData.item.title}
+                image={itemData.item.imageUrl}
+                duration={itemData.item.duration}
+                complexity={itemData.item.complexity}
+                affordability={itemData.item.affordability}
+                onSelect={() => {
+                    props.navigation.navigate('MealDetails', {
+                        mealId: itemData.item.id,
+                    });
+                }}
+            />
+        );
+    };
+
     return (
         <View style={styles.list}>
             <FlatList
-                data={displayedMeals}
+                data={props.listData}
                 keyExtractor={(item, index) => item.id}
                 renderItem={renderMealItem}
                 style={{ width: '100%' }}
