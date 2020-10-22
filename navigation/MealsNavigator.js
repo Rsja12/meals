@@ -60,4 +60,8 @@ const MealsTabNavigator = createBottomTabNavigator(
     }
 );
 
+const mainNavigator = createDrawerNavigation({
+    
+})
+
 export default createAppContainer(MealsTabNavigator);
