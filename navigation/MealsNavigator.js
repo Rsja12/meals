@@ -65,7 +65,7 @@ const FiltersNavigator = createStackNavigator({
 })
 
 const mainNavigator = createDrawerNavigator({
-    MealsFavs: MealsTabNavigator,
+    Favorites: MealsTabNavigator,
     Filters: FiltersNavigator
 })
 
