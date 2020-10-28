@@ -9,7 +9,7 @@ import CategoriesScreen from '../screens/CategoriesScreen';
 import CategoryMealsScreen from '../screens/CategoryMealsScreen';
 import MealDetailsScreen from '../screens/MealDetailsScreen';
 import FavoritesScreen from '../screens/FavoritesScreen';
-import FilterScreen from '../screens/FilterScreen'
+import FilterScreen from '../screens/FilterScreen';
 
 const MealsNavigator = createStackNavigator({
     Categories: CategoriesScreen,
@@ -19,8 +19,8 @@ const MealsNavigator = createStackNavigator({
 
 const FavoritesNavigator = createStackNavigator({
     Favorites: FavoritesScreen,
-    MealDetails: MealDetailsScreen
-})
+    MealDetails: MealDetailsScreen,
+});
 
 const MealsTabNavigator = createBottomTabNavigator(
     {
@@ -61,12 +61,12 @@ const MealsTabNavigator = createBottomTabNavigator(
 );
 
 const FiltersNavigator = createStackNavigator({
-    Filters: FilterScreen
-})
+    Filters: FilterScreen,
+});
 
 const mainNavigator = createDrawerNavigator({
-    Favorites: MealsTabNavigator,
-    Filters: FiltersNavigator
-})
+    Meals: MealsTabNavigator,
+    Filters: FiltersNavigator,
+});
 
 export default createAppContainer(mainNavigator);
