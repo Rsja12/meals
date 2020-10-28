@@ -67,6 +67,10 @@ const FiltersNavigator = createStackNavigator({
 const mainNavigator = createDrawerNavigator({
     Meals: MealsTabNavigator,
     Filters: FiltersNavigator,
+}, {
+    contentOptions: {
+        activeTintColor: "#e67e22"
+    }
 });
 
 export default createAppContainer(mainNavigator);
